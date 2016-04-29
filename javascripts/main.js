@@ -44,6 +44,7 @@ function myFunction() {
   // console.log(posicao);
   // console.log(NT1.value.length);
   var aposReplace = NT1_1.value.replaceAll(NT2.value,NT2_1.value);
+  var aposReplace = NT1_1.value.replaceAll(NT1.value,NT1_1.value);
 
   if (tem_minusculas(aposReplace))
   {
