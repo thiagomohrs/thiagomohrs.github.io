@@ -75,17 +75,13 @@ function AddTableRow() {
 
     return false;
   };
-  function AddTableCol() {
+  function AddTableCol(linha) {
+    var tr = $(linha).closest('td');
+    var rows = "";
 
-    var newRow = $("<td>");
-    var cols = "";
+    rows += '<td><input type="text" id="NT4"></td>';
 
-    cols += '<td><input type="text" id="NT2"> -></td>';
-    cols += '<td><input type="text" id="NT2_1"></td>';
-    cols += '<td><button onclick="AddTableCol(this)" type="button" class="btn">+</button></td>';
-    cols += '<td><button onclick="RemoveTableRow(this)" type="button" class="btn">-</button></td>';
-
-    newRow.append(cols);
+    tr.append(rows);
     $("#table").append(newRow);
 
     return false;
