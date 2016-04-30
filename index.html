@@ -23,7 +23,7 @@
       <section id="main_content">
         <h1><p>&lt;Em Construção&gt;</p></h1>
         <form>
-          <table>
+          <table id="table">
             <tr>
               <td><input  type="text" id="NT1" value="S" required> -></td>
               <td><input type="text" id="NT1_1" required></td>
@@ -34,6 +34,7 @@
               <td><input type="text" id="NT2" value="A" > -></td>
               <td><input type="text" id="NT2_1"></td>
               <td><button onclick="AddTableCol(this)" type="button" class="btn">+</button></td>
+              <td><button onclick="RemoveTableRow(this)" type="button" class="btn">-</button></td>
             </tr>
             <tfoot>
             <tr>

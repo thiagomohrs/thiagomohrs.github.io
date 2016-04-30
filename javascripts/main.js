@@ -59,7 +59,7 @@ function myFunction() {
   console.log(resultadosSemNT.toString());
   document.getElementById("resposta").innerHTML = resultadosSemNT.toString();
 }
-
+var numerolinhas = 2
 function AddTableRow() {
 
     var newRow = $("<tr>");
@@ -72,6 +72,30 @@ function AddTableRow() {
 
     newRow.append(cols);
     $("#table").append(newRow);
+
+    return false;
+  };
+  function AddTableCol() {
+
+    var newRow = $("<td>");
+    var cols = "";
+
+    cols += '<td><input type="text" id="NT2"> -></td>';
+    cols += '<td><input type="text" id="NT2_1"></td>';
+    cols += '<td><button onclick="AddTableCol(this)" type="button" class="btn">+</button></td>';
+    cols += '<td><button onclick="RemoveTableRow(this)" type="button" class="btn">-</button></td>';
+
+    newRow.append(cols);
+    $("#table").append(newRow);
+
+    return false;
+  };
+  function RemoveTableRow(linha) {
+    var tr = $(linha).closest('tr');
+
+    tr.fadeOut(400, function(){ 
+      tr.remove(); 
+    }); 
 
     return false;
   };
