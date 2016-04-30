@@ -3,7 +3,6 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <script type="text/javascript" src="javascripts/main.js"></script>
@@ -11,49 +10,47 @@
     <!-- <script src="jquery-1.12.0.min.js"></script> -->
     <title>Derivação Gramatica de Compiladores by thiagomohrs</title>
   </head>
-
   <body>
-
     <header>
       <div class="container">
         <h1>Derivação Gramatica de Compiladores</h1>
         <h2></h2>
-
         <section id="downloads">
           <a href="https://github.com/thiagomohrs" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
       </div>
     </header>
-
     <div class="container">
       <section id="main_content">
-
-      <h1><p>&lt;Em Construção&gt;</p></h1>
-<form>
-      <table>
-        <tr>
-    <td><input  type="text" id="NT1" value="S" required></td>
-    <td><input type="text" id="NT1_1" required></td>
-    <td><button onclick="AddTableCol(this)" type="button">+</button></td>
-    <td><button onclick="RemoveTableRow(this)" type="button">-</button></td>
-  </tr>
-  <tr>
-    <td><input type="text" id="NT2" value="A" ></td>
-    <td><input type="text" id="NT2_1"></td>
-    <td><button type="button" onclick="addInputTerminal()">+</button></td>
-    <tfoot>
- <tr>
-   <td colspan="5" style="text-align: left;">
-     <button onclick="AddTableRow()" type="button">+</button>
-   </td>
- </tr>
-</tfoot>
-    <tr>
-    </table>
-      <button type="button" onclick="myFunction()">Executar</button>
-  </form>
-  Resultado: <span id="resposta"></span>
-      </section>
-    </div>
-  </body>
-</html>
+        <h1><p>&lt;Em Construção&gt;</p></h1>
+        <form>
+          <table>
+            <tr>
+              <td><input  type="text" id="NT1" value="S" required></td>
+              <td><input type="text" id="NT1_1" required></td>
+              <td><button onclick="AddTableCol(this)" type="button" class="btn">+</button></td>
+              <td><button onclick="RemoveTableRow(this)" type="button" class="btn">-</button></td>
+            </tr>
+            <tr>
+              <td><input type="text" id="NT2" value="A" ></td>
+              <td><input type="text" id="NT2_1"></td>
+              <td><button onclick="AddTableCol(this)" type="button" class="btn">+</button></td>
+            </tr>
+            <tfoot>
+            <tr>
+              <td colspan="5" style="text-align: left;">
+                <button onclick="AddTableRow()" type="button" class="btn">+</button>
+              </td>
+            </tr>
+            </tfoot>
+            <tr>
+            </table>
+            <button type="button" onclick="myFunction()" class="btn">Executar</button>
+          </form>
+          <p> 
+          Resultado(s): <span id="resposta"></span>
+          </p>
+        </section>
+      </div>
+    </body>
+  </html>
