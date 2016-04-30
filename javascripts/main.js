@@ -58,6 +58,20 @@ function myFunction() {
   resultadosSemNT.sort();
   console.log(resultadosSemNT.toString());
   document.getElementById("resposta").innerHTML = resultadosSemNT.toString();
-  // window.document.write(resultadosSemNT.toString());
-  // document.getElementById('resp').write(resultadosSemNT.toString());
 }
+
+function AddTableRow() {
+
+    var newRow = $("<tr>");
+    var cols = "";
+
+    cols += '<td><input type="text" id="NT2"> -></td>';
+    cols += '<td><input type="text" id="NT2_1"></td>';
+    cols += '<td><button onclick="AddTableCol(this)" type="button" class="btn">+</button></td>';
+    cols += '<td><button onclick="RemoveTableRow(this)" type="button" class="btn">-</button></td>';
+
+    newRow.append(cols);
+    $("#table").append(newRow);
+
+    return false;
+  };
