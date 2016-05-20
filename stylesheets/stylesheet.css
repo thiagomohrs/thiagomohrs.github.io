@@ -67,7 +67,9 @@ header h2 {
   font-weight: 300;
   color: #666;
 }
-
+input {
+  border-radius: 5px;
+}
 #downloads .btn {
   display: inline-block;
   text-align: center;
