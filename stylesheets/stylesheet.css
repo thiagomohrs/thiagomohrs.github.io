@@ -95,6 +95,14 @@ h1, h2, h3, h4, h5, h6 {
                0 0 10px rgba(181, 232, 83, 0.1);
 }
 
+.footer {
+	position:absolute;
+	bottom:0;
+  height: 100px;
+	width: 100%;
+  /*background: #b5e853;*/
+}
+
 #main_content h1 {
   font-size: 30px;
 }
@@ -222,6 +230,10 @@ hr {
   background: url("../images/blacktocat.png") 0 0 no-repeat;
 }
 
+.btn-email .icon {
+  opacity: 0.6;
+  background: url("../images/email.png") 0 0 no-repeat;
+}
 /* Links
    a, a:hover, a:visited
 */
