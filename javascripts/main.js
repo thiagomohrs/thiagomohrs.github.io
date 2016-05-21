@@ -55,9 +55,9 @@ function AddTableRow() {
   var numerocolunas = 0;
   var newRow = $("<tr>");
   var cols = "";
-  cols += '<td><input type="text" class="campo" id=\"row' + numerolinhas + '\col' + numerocolunas + '"\> -></td>';
+  cols += '<td><input type="text" id=\"row' + numerolinhas + '\col' + numerocolunas + '"\> -></td>';
   numerocolunas++;
-  cols += '<td><input type="text" class="campo" id=\"row' + numerolinhas + '\col' + numerocolunas + '"\></td>';
+  cols += '<td><input type="text" id=\"row' + numerolinhas + '\col' + numerocolunas + '"\></td>';
   numerolinhas++;
   cols += '<td><button onclick="AddTableCol(this)" type="button" class="btn">+</button></td>';
   cols += '<td><button onclick="RemoveTableRow(this)" type="button" class="btn">-</button></td>';
