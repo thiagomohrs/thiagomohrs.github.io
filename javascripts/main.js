@@ -30,11 +30,24 @@ function replaceAll(str, needle, replacement) {
 
 function myFunction() {
   //TODO Lógica do programa
+  var primeiracoluna = new Array;
+  var resultadosSemNT = new Array;
+  for (var i = 0; i < totalLinhas; i++) {
+
+    for (var j = 0; j < 2; j++) {
+      if (j === 0) {
+        primeiracoluna.push(document.getElementById('row' + i + '\col'+j).value);
+        console.log("Itens primeira coluna: " + primeiracoluna.toString());
+      }
+      var aux = document.getElementById('row' + i + '\col'+j).value;
+      console.log("aux: " + aux);
+    }
+  }
   var row0col0 = document.getElementById('row0col0');
   var row1col0 = document.getElementById('row1col0');
   var row0col1 = document.getElementById('row0col1');
   var row1col1 = document.getElementById('row1col1');
-  var resultadosSemNT = new Array;
+
   var aposReplace = row0col1.value.replaceAll(row0col0.value, row0col1.value);
   aposReplace = aposReplace.replaceAll(row1col0.value, row1col1.value);
 
