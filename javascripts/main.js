@@ -49,6 +49,7 @@ function myFunction() {
 }
 
 var numerolinhas = 2
+var numerocolunaslinha = 2;
 
 function AddTableRow() {
   var numerocolunas = 0;
