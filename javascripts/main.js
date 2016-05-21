@@ -1,4 +1,4 @@
-gString.prototype.replaceAll = String.prototype.replaceAll || function(needle, replacement) {
+String.prototype.replaceAll = String.prototype.replaceAll || function(needle, replacement) {
   return this.split(needle).join(replacement);
 };
 var totalLinhas = 2;
@@ -69,7 +69,7 @@ function AddTableRow() {
 };
 
 function AddTableCol(linha) {
-  //FIXME Arrumar ao adicionar campo na linha
+  //FIXME Arrumar ao adicionar campo input na linha
   var tr = $(linha).closest('td');
   var rows = "";
   rows += '<td><input type="text" id="NT"></td>';
