@@ -36,10 +36,10 @@ function myFunction() {
 
     for (var j = 0; j < 2; j++) {
       if (j === 0) {
-        primeiracoluna.push(document.getElementById('row' + i + '\col'+j).value);
+        primeiracoluna.push(document.getElementById('row' + i + '\col' + j).value);
         console.log("Itens primeira coluna: " + primeiracoluna.toString());
       }
-      var aux = document.getElementById('row' + i + '\col'+j).value;
+      var aux = document.getElementById('row' + i + '\col' + j).value;
       console.log("aux: " + aux);
     }
   }
