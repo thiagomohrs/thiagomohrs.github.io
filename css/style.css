@@ -183,7 +183,7 @@ h5.tittle {
 	border-bottom: 1px solid #e6e6e6;
 }
 .side-bar .personal-info li span {
-	width: 50%;
+	width: 40%;
 	float: left;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -1318,7 +1318,7 @@ h5.tittle {
 	float: left;
 }
 .about-me .personal-info li span {
-	width: 50%;
+	width: 40%;
 	float: left;
 	text-transform: uppercase;
 	font-weight: bold;
