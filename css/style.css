@@ -311,6 +311,9 @@ section {
 .reveal-text {
 	display: inline-block;
 	overflow: hidden;
+	vertical-align: bottom;
+	padding-right: 0.1em;
+	white-space: nowrap;
 }
 
 .hero-subtitle {
