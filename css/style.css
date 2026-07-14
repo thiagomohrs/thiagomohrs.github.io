@@ -890,6 +890,16 @@ section {
 	transition: opacity 0.3s;
 }
 
+.overlay a {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+}
+
 .overlay i {
 	font-size: 1.2rem;
 	width: 44px;
@@ -990,24 +1000,37 @@ section {
 
 .social-links {
 	display: flex;
-	gap: 12px;
+	gap: 16px;
 }
 
 .social-links a {
-	font-size: 1rem;
-	color: var(--text-muted);
-	transition: color 0.3s, border-color 0.3s;
+	font-size: 1.1rem;
+	color: var(--text-color);
+	transition: color 0.3s, border-color 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border: 1px solid var(--border-color);
+	gap: 10px;
+	height: 48px;
+	padding: 0 20px;
+	border: 1px solid var(--border-focus);
+	font-family: var(--font-heading);
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+}
+
+.social-links a i {
+	font-size: 1.2rem;
 }
 
 .social-links a:hover {
-	color: var(--accent-color);
-	border-color: var(--border-focus);
+	color: var(--bg-color);
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+	box-shadow: 0 0 20px rgba(0, 242, 255, 0.25);
+	transform: translateY(-2px);
 }
 
 /* Contact form */
