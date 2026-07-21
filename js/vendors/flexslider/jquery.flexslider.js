@@ -217,12 +217,21 @@
           if (slider.pagingCount > 1) {
             for (var i = 0; i < slider.pagingCount; i++) {
               slide = slider.slides.eq(i);
-              item = (slider.vars.controlNav === "thumbnails") ? '<img src="' + slide.attr( 'data-thumb' ) + '"/>' : '<a>' + j + '</a>';
-              if ( 'thumbnails' === slider.vars.controlNav && true === slider.vars.thumbCaptions ) {
-                var captn = slide.attr( 'data-thumbcaption' );
-                if ( '' !== captn && undefined !== captn ) { item += '<span class="' + namespace + 'caption">' + captn + '</span>'; }
+              var $li = $('<li></li>');
+              if (slider.vars.controlNav === "thumbnails") {
+                item = $('<img />').attr('src', slide.attr('data-thumb'));
+                $li.append(item);
+                if ( 'thumbnails' === slider.vars.controlNav && true === slider.vars.thumbCaptions ) {
+                  var captn = slide.attr( 'data-thumbcaption' );
+                  if ( '' !== captn && undefined !== captn ) {
+                    $li.append($('<span></span>').addClass(namespace + 'caption').text(captn));
+                  }
+                }
+              } else {
+                item = $('<a></a>').text(j);
+                $li.append(item);
               }
-              slider.controlNavScaffold.append('<li>' + item + '</li>');
+              slider.controlNavScaffold.append($li);
               j++;
             }
           }
