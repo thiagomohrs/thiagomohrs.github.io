@@ -47,19 +47,13 @@ thiagomohrs.github.io/
 ├── robots.txt          # Crawler directives
 ├── sitemap.xml         # XML sitemap with hreflang
 ├── css/
-│   ├── style.css       # Main stylesheet (custom design)
-│   └── responsive.css  # Breakpoint overrides
+│   └── style.css       # Main stylesheet (custom design & responsive)
 ├── js/
-│   ├── app.js          # GSAP animations, menu, counters
-│   └── vendors/        # Third-party scripts
-├── images/
-│   ├── profile-2026.jpg
-│   ├── projects/       # Project card images
-│   └── logos/          # Company logos (SVG/PNG)
-├── fonts/              # Self-hosted webfonts (Montserrat, FontAwesome, Ionicons)
-├── pdf/                # Downloadable resume files
-└── php/
-    └── submit.php      # Legacy form handler
+│   └── app.js          # GSAP animations, menu, counters
+└── images/
+    ├── profile-2026.jpg
+    ├── projects/       # Project card images
+    └── logos/          # Company logos (SVG/PNG)
 ```
 
 ---
