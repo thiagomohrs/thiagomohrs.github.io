@@ -4,6 +4,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Prevent browser scroll restoration on reload
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
     // Register GSAP Plugins
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -34,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function runLoader() {
         const tl = gsap.timeline({
             onComplete: () => {
+                window.scrollTo(0, 0);
                 document.body.classList.remove('loading');
                 initScrollAnimations();
                 initCounters();
@@ -193,33 +199,47 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: 'power3.out'
         });
 
-        // Impact Wall
-        const impactSection = document.querySelector('#impact');
-        if (impactSection) {
-            gsap.from('.impact-item', {
-                scrollTrigger: {
-                    trigger: '#impact',
-                    start: 'top 80%',
-                },
-                y: 30,
-                opacity: 0,
-                stagger: 0.1,
-                duration: 0.8,
-                ease: 'power3.out'
+        // Skills Tabs Logic
+        const tabBtns = document.querySelectorAll('.skills-tab-btn');
+        const tabContents = document.querySelectorAll('.skills-tab-content');
+
+        if (tabBtns.length > 0) {
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active from all
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    // Add active to clicked
+                    btn.classList.add('active');
+                    const tabId = btn.getAttribute('data-tab');
+                    const targetContent = document.getElementById(`tab-${tabId}`);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        
+                        // Small GSAP animation for content
+                        gsap.fromTo(targetContent, 
+                            { opacity: 0, y: 10 }, 
+                            { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }
+                        );
+                    }
+                });
             });
         }
 
-        // Tech Tags
-        gsap.from('.tech-tag', {
-            scrollTrigger: {
-                trigger: '.tech-tag-grid',
-                start: 'top 85%',
-            },
-            y: 10,
-            opacity: 0,
-            stagger: 0.03,
-            duration: 0.5,
-            ease: 'power3.out'
+        // Tech Tags - animate each grid independently
+        document.querySelectorAll('.tech-tag-grid').forEach(grid => {
+            gsap.from(grid.querySelectorAll('.tech-tag'), {
+                scrollTrigger: {
+                    trigger: grid,
+                    start: 'top 85%',
+                },
+                y: 10,
+                opacity: 0,
+                stagger: 0.03,
+                duration: 0.5,
+                ease: 'power3.out'
+            });
         });
 
         // Timeline Items
